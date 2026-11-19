@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 2: El diseño con CSS - Cómo hacer una página web</title>
+    
+    <!-- Enlace a tu archivo style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Título principal arriba -->
+    <header>
+        <h1>CSS simple y diseño</h1>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="contenedor">
+        <section>
+            <article>
+
+                <!-- 1. Qué es CSS y cómo funciona -->
+                <h3>1. ¿Qué es CSS y para qué sirve?</h3>
+                <p>
+                    Si el HTML era el esqueleto o los ladrillos de tu casa, el <strong>CSS</strong> (<em>Cascading Style Sheets</em> o Hojas de Estilo en Cascada) es la pintura, la decoración, los muebles y el diseño exterior. 
+                </p>
+                <p>
+                    Mientras que el HTML define qué cosas hay en la pantalla (textos, títulos, imágenes), el CSS se encarga de darles color, cambiar las fuentes, ordenar los espacios y ponerle una hermosa foto de fondo a tu página web.
+                </p>
+
+                <!-- 2. Cómo se conecta el CSS con el HTML -->
+                <h3>2. El puente mágico: Cómo conectar CSS y HTML</h3>
+                <p>
+                    Para que tu página web sepa qué diseño usar, debes vincular tu archivo <code>style.css</code> dentro de la sección <code>&lt;head&gt;</code> de tu HTML. Se hace con una sola línea de código como esta:
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+&lt;link rel="stylesheet" href="style.css"&gt;
+                </pre>
+                <p>
+                    ¡Ojo aquí! Así como pasaba con las imágenes o los enlaces, es muy importante que tu archivo de estilos se llame exactamente <code>style.css</code> y esté guardado <strong>en la misma carpeta</strong> que tus páginas HTML.
+                </p>
+
+                <!-- 3. Cómo se lee el código CSS -->
+                <h3>3. La estructura secreta del CSS</h3>
+                <p>
+                    A diferencia del HTML (que usa etiquetas como <code>&lt;p&gt;</code>), el CSS funciona dando "órdenes" a los elementos usando llaves <code>{ }</code>. Su formato básico se compone de un <em>selector</em> y sus <em>propiedades</em>:
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+selector {
+    propiedad: valor;
+}
+                </pre>
+
+                <!-- 4. Ejemplo de CSS simple -->
+                <h3>4. Un ejemplo de código CSS simple</h3>
+                <p>
+                    Así se ve un ejemplo real dentro de <code>style.css</code> para cambiar el tipo de letra, poner una foto de fondo y darle estilo a un título:
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+/* Ejemplo de CSS básico */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #3498db;
+}
+                </pre>
+
+                <!-- 5. Desglosando nuestro archivo style.css -->
+                <h3>5. Lo que hace nuestro archivo style.css actual</h3>
+                <p>
+                    Si abres tu archivo <code>style.css</code> en Visual Studio Code, verás que cada bloque cumple una función muy clara y sencilla:
+                </p>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li>
+                        <strong><code>body { ... }</code>:</strong> Controla toda la página por completo. Aquí colocamos la foto de fondo (<code>background-image</code>), el tamaño de la letra y el color blanco general del texto.
+                    </li>
+                    <li>
+                        <strong><code>header { ... }</code>:</strong> Diseña la barra superior oscura donde se ubica el título principal de bienvenida.
+                    </li>
+                    <li>
+                        <strong><code>.contenedor { ... }</code>:</strong> Es la caja invisible que limita el ancho del texto para que no se estire demasiado en pantallas grandes y se lea de forma cómoda.
+                    </li>
+                    <li>
+                        <strong><code>.navegacion a { ... }</code>:</strong> Da el aspecto de botón azul brillante a tus enlaces para pasar de una página a otra con total facilidad.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Botones de navegación -->
+        <nav class="navegacion">
+            <a href="1parte.html">← Volver al Paso 1 (HTML)</a>
+            <a href="inicio.html">Ir al Inicio 🏠</a>
+        </nav>
+    </main>
+
+</body>
+</html>

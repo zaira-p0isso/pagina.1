@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 1: Primeros pasos - Cómo hacer una página web</title>
+    
+    <!-- Enlace a tu archivo style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Título principal arriba -->
+    <header>
+        <h1>Html simple</h1>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="contenedor">
+        <section>
+            <article>
+
+                <!-- 1. Creación de la carpeta y Visual Studio Code -->
+                <h3>1. Organizar tu espacio de trabajo</h3>
+                <p>
+                    Todo proyecto web ordenado empieza creando <strong>una carpeta nueva en tu computadora</strong> (por ejemplo, llamada <code>mi-pagina-web</code>). Esa carpeta será tu centro de operaciones y <strong>allí es donde vas a guardar absolutamente todo</strong> lo que forme parte de tu sitio: tus páginas HTML, tus fotos, tus imágenes de fondo y tus hojas de estilo CSS.
+                </p>
+                <p>
+                    Luego, abre tu editor de código gratuito preferido —como <strong>Visual Studio Code (VS Code)</strong>— y arrastra o abre esa carpeta dentro del programa. Al hacerlo, verás todos tus archivos organizados en el panel izquierdo listos para trabajar.
+                </p>
+
+                <!-- 2. Qué es HTML y cómo funciona -->
+                <h3>2. ¿Qué es HTML y cómo funciona?</h3>
+                <p>
+                    HTML significa <em>HyperText Markup Language</em> (Lenguaje de Marcas de Hipertexto). Para entenderlo de forma muy simple, es el esqueleto o la estructura de tu página web: se encarga de definir qué elementos van en pantalla (los títulos, los textos, las imágenes y los enlaces que te permiten pasar de una página a otra).
+                </p>
+
+                <!-- 3. Las partes invisibles y visibles: Head, Header y Body -->
+                <h3>3. Las tres partes mágicas: &lt;head&gt;, &lt;header&gt; y &lt;body&gt;</h3>
+                <p>
+                    Cuando miras un código HTML por primera vez, vas a ver estas tres palabras muy seguido. ¡No te confundas, cada una hace algo distinto!:
+                </p>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li>
+                        <strong><code>&lt;head&gt;</code> (La cabeza / Configuración):</strong> Va arriba del todo, antes de que empiece la página visible. Aquí se guardan los datos "invisibles" para el visitante, como el título que aparece en la pestaña del navegador y la conexión con tu archivo de diseño (CSS).
+                    </li>
+                    <li>
+                        <strong><code>&lt;body&gt;</code> (El cuerpo / Todo lo visible):</strong> Es la etiqueta que envuelve absolutamente todo lo que va a aparecer en la pantalla de tu página web (textos, fotos, botones).
+                    </li>
+                    <li>
+                        <strong><code>&lt;header&gt;</code> (La cabecera visual):</strong> A diferencia del <i>head</i>, este va dentro del <i>body</i> y sirve para poner el bloque de arriba de tu página, como el título principal de bienvenida que ven tus usuarios.
+                    </li>
+                </ul>
+
+                   <h3>3.5. ¿Qué son esas etiquetas &lt;meta&gt; dentro del &lt;head&gt;?</h3>
+                 <p>
+                    Cuando creas un archivo HTML, verás que adentro del <code>&lt;head&gt;</code> aparecen dos líneas un poco raras llamadas <code>&lt;meta&gt;</code>. Aunque parezcan difíciles, cumplen dos tareas súper simples:
+                 </p>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li>
+                        <strong><code>&lt;meta charset="UTF-8"&gt;</code>:</strong> Permite que la página muestre bien las tildes (á, é, í, ó, ú), los signos de interrogación y la letra <strong>ñ</strong> sin que salgan símbolos extraños.
+                    </li>
+                    <li>
+                        <strong><code>&lt;meta name="viewport" ...&gt;</code>:</strong> Hace que tu página web se ajuste automáticamente al tamaño de la pantalla, para que se vea bien tanto en una computadora como en un celular.
+                    </li>
+                </ul>
+                <p>
+                    <em>💡 Truco rápido en Visual Studio Code:</em> No tienes que escribir todo esto de memoria. Si en un archivo vacío escribes <strong><code>!</code></strong> y presionas la tecla <strong>Enter</strong>, el programa te creará toda esta estructura automáticamente.
+                </p>
+            </ul>
+                <!-- 4. Las etiquetas de contenido -->
+                <h3>4. Etiquetas para escribir el contenido</h3>
+                <p>
+                    Dentro del cuerpo de la página, usamos etiquetas básicas encerradas entre los símbolos <code>&lt; y &gt;</code>:
+                </p>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li><code>&lt;h1&gt;</code>: Sirve para poner el título más grande e importante.</li>
+                    <li><code>&lt;p&gt;</code>: Sirve para escribir párrafos de texto normal.</li>
+                    <li><code>&lt;a&gt;</code>: Sirve para crear los enlaces que te llevan de una página a otra (usando <code>href="..."</code>).</li>
+                </ul>
+
+                <!-- 5. Ejemplo de código HTML simple -->
+                <h3>5. Un ejemplo de código HTML simple</h3>
+                <p>
+                    Así es como se vería por dentro un documento HTML básico juntando todo esto:
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;¡Hola mundo!&lt;/h1&gt;
+    &lt;/header&gt;
+    
+    &lt;p&gt;Este es mi primer párrafo escrito con HTML.&lt;/p&gt;
+    &lt;a href="index.html"&gt;Volver al inicio&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <h3>¿Cómo funcionan los enlaces con &lt;a&gt;?</h3>
+<p>
+    La etiqueta <code>&lt;a&gt;</code> sirve para crear <strong>enlaces</strong> (links) que permiten moverse de una página a otra dentro de tu proyecto o hacia otra web.
+</p>
+<pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+&lt;a href="parte2.html"&gt;Ir al Paso 2&lt;/a&gt;
+</pre>
+<ul style="line-height: 1.6; margin-bottom: 20px;">
+    <li><strong><code>&lt;a&gt;</code> y <code>&lt;/a&gt;</code>:</strong> Abren y cierran el enlace.</li>
+    <li><strong><code>href="parte2.html"</code>:</strong> Indica el <em>destino</em> al que va a llevar el clic (el nombre exacto del archivo guardado en tu carpeta).</li>
+    <li><strong><code>Ir al Paso 2</code>:</strong> Es el <em>texto visible</em> que verá el visitante en pantalla para hacer clic.</li>
+</ul>
+            </article>
+        </section>
+
+        <!-- Botones de navegación -->
+        <nav class="navegacion">
+            <a href="inicio.html">← Volver al Inicio</a>
+            <a href="2parte.html">Ir al Paso 2: Diseño (CSS) →</a>
+        </nav>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Estilos clásicos y simples, sin tarjeta flotante */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  /* Foto de fondo con un velo oscuro suave para que el texto se lea siempre */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  background-color: #222222;
+  color: #ffffff;
+}
+
+/* Barra superior para el título */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Contenido abierto (sin caja blanca al medio) */
+.contenedor {
+  max-width: 800px; /* Más ancho para que respire en la pantalla */
+  margin: 40px auto;
+  padding: 0 25px;
+}
+
+/* Bloque de texto con un borde simple a la izquierda */
+article {
+  background-color: rgba(255, 255, 255, 0.1); /* Apenas un toque traslúcido */
+  border-left: 4px solid #3498db;
+  padding: 15px 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Línea separadora y botones abajo */
+.navegacion {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navegacion a {
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.navegacion a:hover {
+  background-color: #217dbb;
+}
