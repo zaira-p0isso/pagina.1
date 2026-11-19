@@ -61,7 +61,144 @@ p {
 .navegacion a {
   text-decoration: none;
   background-color: #3498db;
-  color: white;
+  color: white;<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 2: El diseño con CSS - Cómo hacer una página web</title>
+    
+    <!-- Enlace a tu archivo style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Título principal arriba -->
+    <header>
+        <h1>CSS simple y diseño</h1>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="contenedor">
+        <section>
+            <article>
+
+                <!-- 1. Crear el archivo en tu carpeta -->
+                <h3>1. Crear tu archivo de estilos en la misma carpeta</h3>
+                <p>
+                    Así como creaste tus páginas HTML dentro de tu carpeta de proyecto en Visual Studio Code, ahora necesitas crear un archivo nuevo llamado <strong><code>style.css</code></strong>.
+                </p>
+                <p>
+                    Es súper importante que termine en <strong><code>.css</code></strong> y esté guardado <strong>exactamente en la misma carpeta</strong> que tu <code>index.html</code> y tus demás páginas.
+                </p>
+
+                <!-- 2. Qué es CSS y cómo funciona -->
+                <h3>2. ¿Qué es CSS y cómo funciona?</h3>
+                <p>
+                    CSS significa <em>Cascading Style Sheets</em> (Hojas de Estilo en Cascada). Si el HTML era el esqueleto o los ladrillos de una casa, el CSS es <strong>la pintura, la decoración, el tamaño de las habitaciones y el estilo visual</strong>.
+                </p>
+                <p>
+                    Sin CSS, todas las páginas web se verían iguales: fondo blanco, letras negras pegadas a la izquierda y enlaces azules subrayados. Con CSS le das personalidad propia.
+                </p>
+
+                <!-- 3. El puente mágico: cómo conectar HTML con CSS -->
+                <h3>3. El puente mágico: Conectar HTML con &lt;link&gt;</h3>
+                <p>
+                    Crear el archivo <code>style.css</code> no basta; tienes que avisarle a cada página HTML que debe usarlo. Para eso, colocamos una etiqueta especial dentro del <code>&lt;head&gt;</code> de nuestro HTML:
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+&lt;link rel="stylesheet" href="style.css"&gt;
+                </pre>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li><strong><code>rel="stylesheet"</code>:</strong> Le dice al navegador que este archivo es una hoja de estilos.</li>
+                    <li><strong><code>href="style.css"</code>:</strong> Indica el nombre exacto del archivo CSS que debe buscar en tu carpeta.</li>
+                </ul>
+
+                <!-- 4. La anatomía de una regla CSS -->
+                <h3>4. Cómo se escribe el CSS: Selectores, llaves y propiedades</h3>
+                <p>
+                    En CSS no usamos etiquetas con <code>&lt; &gt;</code>. En su lugar, elegimos qué parte del HTML queremos decorar y abrimos llaves <strong><code>{ }</code></strong> para darle órdenes. Cada orden termina siempre con un punto y coma (<strong><code>;</code></strong>):
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+etiqueta {
+    propiedad: valor;
+}
+                </pre>
+                <p>
+                    Por ejemplo, si escribes <code>h1 { color: white; }</code>, le estás diciendo al navegador: <em>"Busca todos los títulos h1 y píntalos de color blanco"</em>.
+                </p>
+
+                <!-- 5. Etiquetas vs Clases (el punto mágico) -->
+                <h3>5. Etiquetas normales vs. Clases (el punto <code>.</code>)</h3>
+                <p>
+                    En nuestro proyecto usamos dos formas muy sencillas de elegir qué decorar:
+                </p>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li>
+                        <strong>Por nombre de etiqueta (sin punto):</strong> Si escribes <code>body { ... }</code> o <code>p { ... }</code>, el estilo se aplica a todos los elementos de ese tipo en toda la página.
+                    </li>
+                    <li>
+                        <strong>Por clase (empieza con un punto <code>.</code>):</strong> Si en el HTML le pusiste un apodo a una caja (por ejemplo <code>&lt;nav class="navegacion"&gt;</code>), en CSS la llamas poniendo un punto adelante: <code>.navegacion { ... }</code>. Esto sirve para darle un diseño especial solo a esa parte.
+                    </li>
+                </ul>
+
+                <!-- 6. Las propiedades más usadas para empezar -->
+                <h3>6. Las propiedades básicas que debes conocer</h3>
+                <p>
+                    Con solo estas pocas palabras en inglés ya puedes transformar por completo una página simple:
+                </p>
+                <ul style="line-height: 1.6; margin-bottom: 20px;">
+                    <li><strong><code>color:</code></strong> Cambia el color de las letras (puedes usar nombres en inglés como <code>white</code> o códigos como <code>#3498db</code>).</li>
+                    <li><strong><code>background-color:</code></strong> Pone un color de fondo detrás de una caja, barra o botón.</li>
+                    <li><strong><code>background-image: url('foto.jpg');</code></strong> Coloca una imagen de tu carpeta como fondo.</li>
+                    <li><strong><code>font-family:</code></strong> Cambia el tipo de letra (por ejemplo, <code>Arial, sans-serif</code>).</li>
+                    <li><strong><code>padding:</code></strong> Agrega espacio <em>por dentro</em> de una caja para que el texto no quede pegado a los bordes.</li>
+                    <li><strong><code>margin:</code></strong> Agrega espacio <em>por fuera</em> para separar un elemento de otro.</li>
+                </ul>
+
+                <!-- 7. Ejemplo de código CSS simple -->
+                <h3>7. Un ejemplo de código CSS simple</h3>
+                <p>
+                    Así es como se ve un archivo <code>style.css</code> básico juntando todo lo que acabamos de aprender:
+                </p>
+                <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 4px; font-family: monospace; overflow-x: auto;">
+/* Estilo general de toda la página */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    color: white;
+    margin: 0;
+}
+
+/* Estilo para la barra superior */
+header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para nuestros botones con clase "navegacion" */
+.navegacion a {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+                </pre>
+
+            </article>
+        </section>
+
+        <!-- Botones de navegación -->
+        <nav class="navegacion">
+            <a href="1parte.html">← Volver al Paso 1 (HTML)</a>
+            <a href="index.html">Ir al Inicio 🏠</a>
+        </nav>
+    </main>
+
+</body>
+</html>
   padding: 10px 18px;
   border-radius: 3px;
   font-weight: bold;
